@@ -9,20 +9,18 @@ import { CoursesProvider } from "../context/CoursesContext";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <div className="menu">
-          <Menu />
-        </div>
+      <div className="menu">
+        <Menu />
+      </div>
 
-        <div className="pages">
-          <CoursesProvider>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/newCourse" element={<NewCourse />} />
-            </Routes>
-          </CoursesProvider>
-        </div>
-      </HashRouter>
+      <div className="pages">
+        <CoursesProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/newCourse" element={<NewCourse />} />
+          </Routes>
+        </CoursesProvider>
+      </div>
     </div>
   );
 }
