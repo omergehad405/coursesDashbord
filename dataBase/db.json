@@ -1,0 +1,18 @@
+{
+  "courses": [
+    {
+      "id": "5071",
+      "title": "react course",
+      "duration": "80",
+      "description": "this is react course for begainer ",
+      "instractor": "omar gehad"
+    },
+    {
+      "id": "d4ad",
+      "title": "angular",
+      "duration": "80",
+      "description": "this is angular course for begainers",
+      "instractor": "ahmed"
+    }
+  ]
+}

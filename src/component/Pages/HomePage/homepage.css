@@ -1,0 +1,114 @@
+.courses-page {
+  position: relative;
+  > .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10%;
+      height: 3px;
+      background-color: #000000;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .courses_container {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & thead th {
+      background-color: #000000;
+      color: #fff;
+      text-align: left;
+      padding: 12px 15px;
+      font-weight: 600;
+    }
+
+    & tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+
+    & tbody td {
+      padding: 12px 15px;
+      color: #333;
+    }
+
+    button.edit,
+    button.delete {
+      padding: 6px 12px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    button.edit {
+      background-color: #3b82f6;
+      color: #fff;
+
+      &:hover {
+        background-color: #2563eb;
+      }
+    }
+
+    button.delete {
+      background-color: #ef4444;
+      color: #fff;
+
+      &:hover {
+        background-color: #dc2626;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .courses_container thead {
+        display: none;
+      }
+
+      .courses_container tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .courses_container tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+
+      .courses_container tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+}
