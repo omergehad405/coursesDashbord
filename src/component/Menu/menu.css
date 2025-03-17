@@ -2,7 +2,6 @@
   height: 100%;
   background: white;
   transition: 0.3s;
-  z-index: 100;
   padding: 25px;
 
   h1 {

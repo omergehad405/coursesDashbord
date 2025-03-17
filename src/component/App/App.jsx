@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Menu from "../Menu/Menu";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage";
 import NewCourse from "../Pages/newCoursePage/NewCourse";
 import { CoursesProvider } from "../context/CoursesContext";
@@ -9,7 +9,7 @@ import { CoursesProvider } from "../context/CoursesContext";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <div className="menu">
           <Menu />
         </div>
@@ -22,7 +22,7 @@ function App() {
             </Routes>
           </CoursesProvider>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
